@@ -1,0 +1,11 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  color: #004080;
+}
+
+footer a:hover {
+  color: #0d6efd;
+}

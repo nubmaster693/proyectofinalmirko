@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portal Institucional</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous">document.getElementById("formContacto").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const nombre = document.getElementById("nombreContacto").value.trim();
+  const correo = document.getElementById("correoContacto").value.trim();
+  const mensaje = document.getElementById("mensajeContacto").value.trim();
+  if (nombre && correo && mensaje) {
+    document.getElementById("mensajeFormContacto").textContent = "Gracias por contactarnos, responderemos pronto.";
+    e.target.reset();
+  }
+});
+</script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .form-section { display: none; }
+    .form-section.active { display: block; }
+    h2, h4 { color: #004080; }
+    footer a:hover { color: #0d6efd; }
+  </style>
+</head>
+<body>
+  <header class="bg-primary text-white text-center p-4">
+    <h1>Instituto Superior Tecnológico</h1>
+  </header>
+
+  <!-- CARRUSEL -->
+  <div id="carouselInstituto" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://via.placeholder.com/1200x400?text=Bienvenidos+al+Instituto" class="d-block w-100" alt="1">
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/1200x400?text=Excelencia+Académica" class="d-block w-100" alt="2">
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/1200x400?text=Carreras+Profesionales" class="d-block w-100" alt="3">
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/1200x400?text=Docentes+Calificados" class="d-block w-100" alt="4">
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/1200x400?text=Innovación+y+Tecnología" class="d-block w-100" alt="5">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselInstituto" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselInstituto" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- LOGIN PARA DOCENTES Y ADMINISTRATIVOS -->
+  <section class="p-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Acceso</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Login Docente</h4>
+          <form id="loginDocente">
+            <div class="mb-3"><input type="email" class="form-control" id="correoDocenteLogin" placeholder="Correo del Docente" required></div>
+            <div class="mb-3"><input type="password" class="form-control" id="claveDocente" placeholder="Contraseña" required></div>
+            <button class="btn btn-primary" type="submit">Iniciar sesión</button>
+            <div id="mensajeDocente" class="text-danger mt-2"></div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h4>Login Administrativo</h4>
+          <form id="loginAdmin">
+            <div class="mb-3"><input type="email" class="form-control" id="correoAdminLogin" placeholder="Correo del Administrativo" required></div>
+            <div class="mb-3"><input type="password" class="form-control" id="claveAdmin" placeholder="Contraseña" required></div>
+            <button class="btn btn-dark" type="submit">Iniciar sesión</button>
+            <div id="mensajeAdmin" class="text-danger mt-2"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="p-5 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-4">Nosotros</h2>
+      <p class="lead text-center">Somos un Instituto de Educación Superior con más de 20 años formando profesionales técnicos competentes y comprometidos con el desarrollo del país. Contamos con una plana docente altamente calificada y carreras orientadas al mercado laboral actual.</p>
+    </div>
+  </section>
+
+  <!-- NOTICIAS -->
+  <section class="p-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Noticias</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Nueva Carrera: Desarrollo Web</h5>
+              <p class="card-text">Desde este semestre ofrecemos la nueva carrera técnica en Desarrollo Web.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Inicio de Clases</h5>
+              <p class="card-text">Las clases del ciclo académico 2025-II inician el 15 de agosto.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Convenio con Empresas</h5>
+              <p class="card-text">Firmamos convenio con empresas para prácticas preprofesionales.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="p-5 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-4">Registro Institucional</h2>
+      <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+        <button class="btn btn-outline-primary" onclick="mostrarFormulario('formEstudiante')">Estudiantes</button>
+        <button class="btn btn-outline-secondary" onclick="mostrarFormulario('formDocente')">Docentes</button>
+        <button class="btn btn-outline-success" onclick="mostrarFormulario('formMatricula')">Matrículas</button>
+        <button class="btn btn-outline-warning" onclick="mostrarFormulario('formNota')">Notas</button>
+        <button class="btn btn-outline-info" onclick="mostrarFormulario('formPago')">Pagos</button>
+        <button class="btn btn-outline-dark" onclick="mostrarFormulario('formAdministrativo')">Administrativos</button>
+      </div>
+
+      <!-- FORMULARIOS -->
+
+<!-- FORMULARIO: ESTUDIANTE -->
+<form id="formEstudiante" class="form-section">
+  <h4>Registro de Estudiante</h4>
+  <div class="mb-3"><input class="form-control" name="nombre" placeholder="Nombre" required></div>
+  <div class="mb-3"><input class="form-control" name="dni" placeholder="DNI" required></div>
+  <div class="mb-3"><input class="form-control" name="correo" placeholder="Correo" required></div>
+  <div class="mb-3"><input class="form-control" name="carrera" placeholder="Carrera" required></div>
+  <div class="mb-3"><input class="form-control" name="matricula" placeholder="Código de Matrícula" required></div>
+  <button class="btn btn-primary">Registrar Estudiante</button>
+</form>
+
+<!-- FORMULARIO: DOCENTE -->
+<form id="formDocente" class="form-section">
+  <h4>Registro de Docente</h4>
+  <div class="mb-3"><input class="form-control" name="nombre" placeholder="Nombre" required></div>
+  <div class="mb-3"><input class="form-control" name="dni" placeholder="DNI" required></div>
+  <div class="mb-3"><input class="form-control" name="correo" placeholder="Correo" required></div>
+  <div class="mb-3"><input class="form-control" name="curso" placeholder="Curso" required></div>
+  <div class="mb-3"><input class="form-control" type="password" name="clave" placeholder="Contraseña" required></div>
+  <button class="btn btn-secondary">Registrar Docente</button>
+</form>
+
+<!-- FORMULARIO: MATRÍCULA -->
+<form id="formMatricula" class="form-section">
+  <h4>Registro de Matrícula</h4>
+  <div class="mb-3"><input class="form-control" name="codigo" placeholder="Código" required></div>
+  <div class="mb-3"><input class="form-control" name="dniEstudiante" placeholder="DNI Estudiante" required></div>
+  <div class="mb-3"><input class="form-control" name="carrera" placeholder="Carrera" required></div>
+  <button class="btn btn-success">Registrar Matrícula</button>
+</form>
+
+<!-- FORMULARIO: NOTA -->
+<form id="formNota" class="form-section">
+  <h4>Registro de Nota (solo docentes)</h4>
+  <div class="mb-3"><input class="form-control" name="dniEstudiante" placeholder="DNI del Estudiante" required></div>
+  <div class="mb-3"><input class="form-control" name="curso" placeholder="Curso" required></div>
+  <div class="mb-3"><input class="form-control" type="number" name="nota" placeholder="Nota" min="0" max="20" step="0.1" required></div>
+  <button class="btn btn-warning">Registrar Nota</button>
+</form>
+
+<!-- FORMULARIO: PAGO -->
+<form id="formPago" class="form-section">
+  <h4>Registro de Pago (solo administrativos)</h4>
+  <div class="mb-3"><input class="form-control" name="dniEstudiante" placeholder="DNI Estudiante" required></div>
+  <div class="mb-3">
+    <select class="form-select" name="estado" required>
+      <option value="">Estado</option>
+      <option value="Pagado">Pagado</option>
+      <option value="Pendiente">Pendiente</option>
+    </select>
+  </div>
+  <button class="btn btn-info">Registrar Pago</button>
+</form>
+
+<!-- FORMULARIO: ADMINISTRATIVO -->
+<form id="formAdministrativo" class="form-section">
+  <h4>Registro de Administrativo</h4>
+  <div class="mb-3"><input class="form-control" name="nombre" placeholder="Nombre" required></div>
+  <div class="mb-3"><input class="form-control" name="dni" placeholder="DNI" required></div>
+  <div class="mb-3"><input class="form-control" name="correo" placeholder="Correo" required></div>
+  <div class="mb-3"><input class="form-control" type="password" name="clave" placeholder="Contraseña" required></div>
+  <button class="btn btn-dark">Registrar Administrativo</button>
+</form>
+      <!-- ... FORMULARIOS EXISTENTES ... -->
+
+      <div id="resultado" class="mt-4 text-success"></div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="p-5 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-4">Contáctanos</h2>
+      <form id="formContacto" class="mx-auto" style="max-width:600px;">
+        <div class="mb-3"><input type="text" class="form-control" id="nombreContacto" placeholder="Tu nombre" required></div>
+        <div class="mb-3"><input type="email" class="form-control" id="correoContacto" placeholder="Tu correo" required></div>
+        <div class="mb-3"><textarea class="form-control" id="mensajeContacto" rows="4" placeholder="Tu mensaje" required></textarea></div>
+        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+        <div id="mensajeFormContacto" class="text-success mt-2"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center p-4">
+    <p>Síguenos en nuestras redes sociales</p>
+    <div>
+      <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+      <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+      <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const docentesRegistrados = {
+      "docente1@instituto.edu": "clave123",
+      "docente2@instituto.edu": "clave456"
+    };
+
+    const administrativosRegistrados = {
+      "admin1@instituto.edu": "admin123",
+      "admin2@instituto.edu": "admin456"
+    };
+
+    let docenteLogueado = null;
+    let adminLogueado = null;
+
+// Registro automático de nuevos docentes y administrativos
+
+document.getElementById("formDocente").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const datos = new FormData(form);
+  const correo = datos.get("correo").trim().toLowerCase();
+  const clave = datos.get("clave");
+  if (correo && clave) {
+    docentesRegistrados[correo] = clave;
+    alert("Docente registrado exitosamente. Ya puede iniciar sesión.");
+  }
+  mostrarResultado(form);
+});
+
+document.getElementById("formAdministrativo").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const datos = new FormData(form);
+  const correo = datos.get("correo").trim().toLowerCase();
+  const clave = datos.get("clave");
+  if (correo && clave) {
+    administrativosRegistrados[correo] = clave;
+    alert("Administrativo registrado exitosamente. Ya puede iniciar sesión.");
+  }
+  mostrarResultado(form);
+});
+
+    document.getElementById("loginDocente").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const correo = document.getElementById("correoDocenteLogin").value.trim().toLowerCase();
+      const clave = document.getElementById("claveDocente").value;
+      if (docentesRegistrados[correo] === clave) {
+        docenteLogueado = correo;
+        document.getElementById("mensajeDocente").textContent = "Login exitoso.";
+      } else {
+        document.getElementById("mensajeDocente").textContent = "Correo o contraseña incorrectos.";
+      }
+    });
+
+    document.getElementById("loginAdmin").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const correo = document.getElementById("correoAdminLogin").value.trim().toLowerCase();
+      const clave = document.getElementById("claveAdmin").value;
+      if (administrativosRegistrados[correo] === clave) {
+        adminLogueado = correo;
+        document.getElementById("mensajeAdmin").textContent = "Login exitoso.";
+      } else {
+        document.getElementById("mensajeAdmin").textContent = "Correo o contraseña incorrectos.";
+      }
+    });
+
+    function mostrarFormulario(id) {
+      document.querySelectorAll('.form-section').forEach(f => f.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.getElementById("resultado").innerHTML = '';
+    }
+
+    function mostrarResultado(formulario) {
+      const datos = new FormData(formulario);
+      let salida = `<h5>Datos registrados:</h5><ul>`;
+      for (let [clave, valor] of datos.entries()) {
+        salida += `<li><strong>${clave}:</strong> ${valor}</li>`;
+      }
+      salida += `</ul>`;
+      document.getElementById("resultado").innerHTML = salida;
+      formulario.reset();
+    }
+
+    document.getElementById("formNota").addEventListener("submit", function(e) {
+      e.preventDefault();
+      if (!docenteLogueado) {
+        alert("Debes iniciar sesión como docente para registrar notas.");
+        return;
+      }
+      mostrarResultado(e.target);
+    });
+
+    document.getElementById("formPago").addEventListener("submit", function(e) {
+      e.preventDefault();
+      if (!adminLogueado) {
+        alert("Debes iniciar sesión como administrativo para registrar pagos.");
+        return;
+      }
+      mostrarResultado(e.target);
+    });
+
+    document.querySelectorAll("form.form-section:not(#formNota):not(#formPago)").forEach(form => {
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        mostrarResultado(form);
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
